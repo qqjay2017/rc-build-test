@@ -39,7 +39,7 @@ function FileItem(props: FileItemProps) {
   }, [fileName]);
   return (
     <div className="fileItem">
-      <img className="img" src={fileItemSrcAndActive.src} />
+      <img className="img" src={fileItemSrcAndActive.src} alt="" />
       <a target="_blank" rel="noreferrer" href={fileSrcUrl} className="link">
         <span
           style={{
@@ -50,7 +50,7 @@ function FileItem(props: FileItemProps) {
         >
           {fileName}
         </span>
-        <DownloadOutlined />
+        <DownloadOutlined style={{ marginLeft: "16px" }} />
       </a>
     </div>
   );
