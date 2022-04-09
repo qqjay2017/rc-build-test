@@ -1,11 +1,12 @@
 {
   "name": "ljc-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "files": [
     "disk"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "watch": "parcel watch",
-    "build": "rm -rf ./dist && parcel build",
+    "build": "rm -rf ./.parcel-cache && rm -rf ./dist && parcel build",
     "start": "react-scripts start",
     "build1": "react-scripts build",
     "test": "react-scripts test",
@@ -50,12 +51,10 @@
   "module": "dist/module.js",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-
   "devDependencies": {
     "@parcel/packager-ts": "^2.4.1",
     "@parcel/transformer-less": "^2.4.1",
     "@parcel/transformer-typescript-types": "^2.4.1",
-
     "@types/mime": "^2.0.3",
     "parcel": "^2.4.1"
   }

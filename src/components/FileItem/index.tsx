@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import fileIconData from "../../constant/fileIconData";
 import { getFileType } from "../../helps/getFileType";
 import "./styles.less";
-
+import { DownloadOutlined } from "@ant-design/icons";
 export interface FileItemProps {
   fileName: string;
   fileSrcUrl: string;
@@ -50,6 +50,7 @@ function FileItem(props: FileItemProps) {
         >
           {fileName}
         </span>
+        <DownloadOutlined />
       </a>
     </div>
   );
