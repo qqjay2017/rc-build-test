@@ -4,15 +4,23 @@ import fileIconData from "../../constant/fileIconData";
 import { getFileType } from "../../helps/getFileType";
 import "./styles.less";
 import { DownloadOutlined } from "@ant-design/icons";
-export interface FileItemProps {
+export interface IFileItemProps {
+  /**
+   * 文件名称
+   * @description       文件名称
+   */
   fileName: string;
+  /**
+   * 文件链接
+   * @description       文件链接
+   */
   fileSrcUrl: string;
 }
 
 function getTypeIsActive(fileType: string) {
   return ["pdf", "mp4", "jpg"].includes(fileType);
 }
-function FileItem(props: FileItemProps) {
+function FileItem(props: IFileItemProps) {
   const { fileName, fileSrcUrl } = props;
 
   const fileItemSrcAndActive = useMemo(() => {
@@ -50,7 +58,15 @@ function FileItem(props: FileItemProps) {
         >
           {fileName}
         </span>
-        <DownloadOutlined style={{ marginLeft: "16px" }} />
+        <DownloadOutlined
+          style={{
+            marginLeft: "16px",
+            color: "#1677FF",
+            fontSize: "16px",
+            width: "16px",
+            height: "16px",
+          }}
+        />
       </a>
     </div>
   );
